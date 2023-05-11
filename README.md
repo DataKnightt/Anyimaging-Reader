@@ -7,7 +7,7 @@
 
 泛影阅片的安装方式如下：
 
-1、打开 Anyimaging-Reader 的 GitHub 仓库页面。(https://github.com/DataKnightt/Anyimaging-Reader)
+1、打开 Anyimaging-Reader 的 GitHub 仓库页面。（https://github.com/DataKnightt/AnyimagingReader）
 
 2、在页面右侧的 "Releases" 部分选择最新的版本并下载相应的压缩包。
 
