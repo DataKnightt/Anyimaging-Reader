@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\png">
+      <UniqueIdentifier>{09b3bc8d-62e1-49f9-b44b-645759724a41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\png\video">
+      <UniqueIdentifier>{f61c7486-1efa-444f-9d58-482160adc785}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="KissDicomViewer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\view\dicom2d\ExportVideoDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dao\Model\importstudymodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dao\Model\sqlimagemodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dao\Model\sqlstudymodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dao\TabView\importstudytabview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dao\TabView\kisstabview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dao\TabView\sqlimagetabview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dao\TabView\sqlstudytabview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dao\dbmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dao\logdbmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dao\studydao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\global\global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\script\echoscu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\script\exportimagethread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\script\imageloadthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\script\importdcmfilethread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\script\scandcmfilethread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\script\storescpthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\currency\gridpopwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\currency\videocontrolview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\abstractpathitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicsangleitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicsarrowitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicscliprectitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicscobbangleitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicscrossitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicsellipseitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicslineitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicsrectitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicssimpletextitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicstextmarkdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicstextmarkitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicstumoritem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\ImageData\imageinstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\ImageData\imageinstancedata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\ImageData\seriesinstance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\dicomimagelabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\dicomimageview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\exportimagedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\filewatcherthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\modalityproperty.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\thumbnailbarwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\viewcontainerwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\widget\dicomtagswidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\widget\importdcmwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\widget\scpsettingview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\window\dicomviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\window\logdbwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\window\studyexplorerwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\ExportVideoDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom3d\vrraycast.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\behaviorthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\view\dicom2d\mPR_new.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MPR_lmy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vtkResliceCursorCallback.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\Model\importstudymodel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\dao\Model\sqlimagemodel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\dao\Model\sqlstudymodel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\dao\TabView\importstudytabview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\dao\TabView\kisstabview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\dao\TabView\sqlimagetabview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\dao\TabView\sqlstudytabview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\dao\dbmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\dao\logdbmanager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\dao\studydao.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\global\global.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\script\exportimagethread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\script\imageloadthread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\script\importdcmfilethread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\script\scandcmfilethread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\script\storescpthread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\currency\gridpopwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\currency\videocontrolview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\GraphicsItem\graphicstextmarkdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\ImageData\imageinstance.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\ImageData\seriesinstance.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\dicomimagelabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\dicomimageview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\exportimagedialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\filewatcherthread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\thumbnailbarwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\viewcontainerwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\widget\dicomtagswidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\widget\importdcmwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\widget\scpsettingview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\window\dicomviewer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\window\logdbwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\window\studyexplorerwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\ExportVideoDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\behaviorthread.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom2d\mPR_new.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MPR_lmy.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\view\dicom3d\vrraycast.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\global\KissDicomViewConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\global\PluganInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\global\stable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\global\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\global\studyrecord.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\script\echoscu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\abstractpathitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicsangleitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicsarrowitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicscliprectitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicscobbangleitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicscrossitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicsellipseitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicslineitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicsrectitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicssimpletextitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicstextmarkitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicstumoritem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\ImageData\imageinstancedata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\view\dicom2d\modalityproperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vtkResliceCursorCallback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="src\window\logdbwidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\window\dicomviewer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\window\studyexplorerwidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\widget\dicomtagswidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\widget\importdcmwidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\widget\scpsettingview.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\view\dicom2d\exportimagedialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\view\currency\gridpopwidget.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\view\currency\videocontrolview.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\view\dicom2d\GraphicsItem\graphicstextmarkdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\resources\Style\style.qss" />
+    <None Include="src\window\KissWindow" />
+    <None Include="src\view\KissView" />
+    <None Include="src\widget\KissWidget" />
+    <None Include="src\script\KissScript" />
+    <None Include="src\dao\KissDb" />
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="src\resources\xml\modalityprop.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\resources\png\video\play01.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video\play02.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video\pause01.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video\nextframe02.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video\nextframe01.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video\backforward01.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video\backforward02.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video\fastforward02.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video\fastforward01.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video\prevframe02.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video\prevframe01.png">
+      <Filter>Resource Files\png\video</Filter>
+    </Image>
+    <Image Include="src\resources\png\video.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\add_bottom.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\zoomout.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\add_left.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\add_right.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\add_top.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\adjust.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\angle.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\anno.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\arrow_sync.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\branch_close.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\branch_open.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\calendar_nextmonth.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\calendar_prevmonth.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\checkbox_checked.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\checkbox_checked_disable.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\checkbox_parcial.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\checkbox_parcial_disable.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\checkbox_unchecked.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\checkbox_unchecked_disable.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\contrast.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\download.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\ellipse.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\export.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\full_screen.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\full_screen_exit.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\grid.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\help.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\hflip.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\line.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\lrotate.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\magnifier.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\move.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\open.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\pencil.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\polygon.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\radiobutton_checked.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\radiobutton_checked_disable.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\radiobutton_unchecked.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\radiobutton_unchecked_disable.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\rect.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\recycle.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\reset.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\rrotate.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\scrollbardown01.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\scrollbardown02.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\scrollbarleft01.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\scrollbarleft02.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\scrollbarright01.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\scrollbarright02.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\scrollbarup01.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Style\StyleResources\scrollbarup02.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\series.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\settings.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\slicing.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\text.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\vflip.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\png\zoomin.png">
+      <Filter>Resource Files\png</Filter>
+    </Image>
+    <Image Include="src\resources\Multi.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="src\resources\dicomviewer.qrc">
+      <Filter>Resource Files\png</Filter>
+    </QtRcc>
+    <QtRcc Include="src\resources\style.qrc">
+      <Filter>Resource Files\png</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DicomViewer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ACA0DADB-BABA-4F6B-9FDA-DCEA8BFB21C6}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <ProjectName>DicomViewer</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;sql;network;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+    <QtPlugin>false</QtPlugin>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;sql;network;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>D:\Environment\Qt\5.15.2\msvc2019_64\include;D:\360MoveData\Users\LEBRONH\Desktop\ImageCloud_PC\trunk\Dicomviewer\DicomViewer\src;D:\Environment\DCMTK-lib\include;D:\Environment\quazip\include;D:\360MoveData\Users\LEBRONH\Desktop\ImageCloud_PC\trunk\Dicomviewer\DicomViewer\src\view\dicom2d;D:\Environment\vtk-prefix\include\vtk-8.2;D:\Environment\opencv\build\include;D:\360MoveData\Users\LEBRONH\Desktop\ImageCloud_PC\trunk\Dicomviewer\DicomViewer;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Environment\vtk-prefix\lib;D:\Environment\DCMTK-lib\lib;D:\Environment\opencv\build\x64\vc15\lib;D:\Environment\quazip\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <IncludePath>D:\Code\Dicomviewer\DicomViewer\src;D:\SoftWare\QT\5.15.2\msvc2019_64\include;D:\Code\Dicomviewer\DicomViewer\src\view\dicom2d;D:\3rdParty\DCMTK\DCMTK-lib\include;D:\3rdParty\quazip\include;D:\3rdParty\opencv\build\include;D:\3rdParty\VTK-8.2.0_Install\include\vtk-8.2;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\3rdParty\VTK-8.2.0_Install\lib;D:\3rdParty\quazip\lib;D:\3rdParty\DCMTK\DCMTK-lib\lib;D:\3rdParty\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>Iphlpapi.lib;ws2_32.lib;wsock32.lib;netapi32.lib;ofstd.lib;oflog.lib;dcmdata.lib;zlib_d.lib;D:\Environment\DCMTK-lib\lib\*.lib;D:\Environment\opencv\build\x64\vc15\lib\opencv_world455d.lib;D:\Environment\quazip\lib\quazipd.lib;D:\Environment\vtk-prefix\lib\*.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <SDLCheck>false</SDLCheck>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>Iphlpapi.lib;ws2_32.lib;wsock32.lib;netapi32.lib;ofstd.lib;oflog.lib;dcmdata.lib;zlib_o.lib;D:\3rdParty\DCMTK\DCMTK-lib\lib\*.lib;opencv_world455.lib;D:\3rdParty\VTK-8.2.0_Install\lib\*.lib;quazip.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="MPR_lmy.cpp" />
+    <ClCompile Include="src\dao\dbmanager.cpp" />
+    <ClCompile Include="src\dao\logdbmanager.cpp" />
+    <ClCompile Include="src\dao\Model\importstudymodel.cpp" />
+    <ClCompile Include="src\dao\Model\sqlimagemodel.cpp" />
+    <ClCompile Include="src\dao\Model\sqlstudymodel.cpp" />
+    <ClCompile Include="src\dao\studydao.cpp" />
+    <ClCompile Include="src\dao\TabView\importstudytabview.cpp" />
+    <ClCompile Include="src\dao\TabView\kisstabview.cpp" />
+    <ClCompile Include="src\dao\TabView\sqlimagetabview.cpp" />
+    <ClCompile Include="src\dao\TabView\sqlstudytabview.cpp" />
+    <ClCompile Include="src\global\global.cpp" />
+    <ClCompile Include="src\script\echoscu.cpp" />
+    <ClCompile Include="src\script\exportimagethread.cpp" />
+    <ClCompile Include="src\script\imageloadthread.cpp" />
+    <ClCompile Include="src\script\importdcmfilethread.cpp" />
+    <ClCompile Include="src\script\scandcmfilethread.cpp" />
+    <ClCompile Include="src\script\storescpthread.cpp" />
+    <ClCompile Include="src\view\currency\gridpopwidget.cpp" />
+    <ClCompile Include="src\view\currency\videocontrolview.cpp" />
+    <ClCompile Include="src\view\dicom2d\behaviorthread.cpp" />
+    <ClCompile Include="src\view\dicom2d\dicomimagelabel.cpp" />
+    <ClCompile Include="src\view\dicom2d\dicomimageview.cpp" />
+    <ClCompile Include="src\view\dicom2d\exportimagedialog.cpp" />
+    <ClCompile Include="src\view\dicom2d\ExportVideoDialog.cpp" />
+    <ClCompile Include="src\view\dicom2d\filewatcherthread.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\abstractpathitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicsangleitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicsarrowitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicscliprectitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicscobbangleitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicscrossitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicsellipseitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicslineitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicsrectitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicssimpletextitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicstextmarkdialog.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicstextmarkitem.cpp" />
+    <ClCompile Include="src\view\dicom2d\GraphicsItem\graphicstumoritem.cpp" />
+    <ClCompile Include="src\view\dicom2d\ImageData\imageinstance.cpp" />
+    <ClCompile Include="src\view\dicom2d\ImageData\imageinstancedata.cpp" />
+    <ClCompile Include="src\view\dicom2d\ImageData\seriesinstance.cpp" />
+    <ClCompile Include="src\view\dicom2d\modalityproperty.cpp" />
+    <ClCompile Include="src\view\dicom2d\mPR_new.cpp" />
+    <ClCompile Include="src\view\dicom2d\thumbnailbarwidget.cpp" />
+    <ClCompile Include="src\view\dicom2d\viewcontainerwidget.cpp" />
+    <ClCompile Include="src\view\dicom3d\vrraycast.cpp" />
+    <ClCompile Include="src\widget\dicomtagswidget.cpp" />
+    <ClCompile Include="src\widget\importdcmwidget.cpp" />
+    <ClCompile Include="src\widget\scpsettingview.cpp" />
+    <ClCompile Include="src\window\dicomviewer.cpp" />
+    <ClCompile Include="src\window\logdbwidget.cpp" />
+    <ClCompile Include="src\window\studyexplorerwidget.cpp" />
+    <ClCompile Include="vtkResliceCursorCallback.cpp" />
+    <QtRcc Include="src\resources\dicomviewer.qrc" />
+    <QtRcc Include="src\resources\style.qrc" />
+    <QtUic Include="KissDicomViewer.ui" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="src\view\currency\gridpopwidget.ui" />
+    <QtUic Include="src\view\currency\videocontrolview.ui" />
+    <QtUic Include="src\view\dicom2d\exportimagedialog.ui" />
+    <QtUic Include="src\view\dicom2d\ExportVideoDialog.ui" />
+    <QtUic Include="src\view\dicom2d\GraphicsItem\graphicstextmarkdialog.ui" />
+    <QtUic Include="src\widget\dicomtagswidget.ui" />
+    <QtUic Include="src\widget\importdcmwidget.ui" />
+    <QtUic Include="src\widget\scpsettingview.ui" />
+    <QtUic Include="src\window\dicomviewer.ui" />
+    <QtUic Include="src\window\logdbwidget.ui" />
+    <QtUic Include="src\window\studyexplorerwidget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\Model\importstudymodel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\Model\sqlimagemodel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\Model\sqlstudymodel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\TabView\importstudytabview.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\TabView\kisstabview.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\TabView\sqlimagetabview.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\TabView\sqlstudytabview.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\dbmanager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\logdbmanager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\dao\studydao.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\global\global.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="MPR_lmy.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="src\global\KissDicomViewConfig.h" />
+    <ClInclude Include="src\global\PluganInterface.h" />
+    <ClInclude Include="src\global\stable.h" />
+    <ClInclude Include="src\global\stdafx.h" />
+    <ClInclude Include="src\global\studyrecord.h" />
+    <ClInclude Include="src\script\echoscu.h" />
+    <ClInclude Include="vtkResliceCursorCallback.h" />
+    <QtMoc Include="src\view\dicom2d\mPR_new.h" />
+    <QtMoc Include="src\view\dicom3d\vrraycast.h" />
+    <QtMoc Include="src\view\dicom2d\ExportVideoDialog.h" />
+    <QtMoc Include="src\view\dicom2d\behaviorthread.h" />
+    <ClInclude Include="src\view\dicom2d\modalityproperty.h" />
+    <QtMoc Include="src\window\studyexplorerwidget.h" />
+    <QtMoc Include="src\window\logdbwidget.h" />
+    <QtMoc Include="src\window\dicomviewer.h" />
+    <QtMoc Include="src\widget\scpsettingview.h" />
+    <QtMoc Include="src\widget\importdcmwidget.h" />
+    <QtMoc Include="src\widget\dicomtagswidget.h" />
+    <QtMoc Include="src\view\dicom2d\viewcontainerwidget.h" />
+    <QtMoc Include="src\view\dicom2d\thumbnailbarwidget.h" />
+    <QtMoc Include="src\view\dicom2d\filewatcherthread.h" />
+    <QtMoc Include="src\view\dicom2d\exportimagedialog.h" />
+    <QtMoc Include="src\view\dicom2d\dicomimageview.h" />
+    <QtMoc Include="src\view\dicom2d\dicomimagelabel.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\abstractpathitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicsangleitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicsarrowitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicscliprectitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicscobbangleitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicscrossitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicsellipseitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicslineitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicsrectitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicssimpletextitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicstextmarkitem.h" />
+    <ClInclude Include="src\view\dicom2d\GraphicsItem\graphicstumoritem.h" />
+    <ClInclude Include="src\view\dicom2d\ImageData\imageinstancedata.h" />
+    <QtMoc Include="src\view\dicom2d\ImageData\seriesinstance.h" />
+    <QtMoc Include="src\view\dicom2d\ImageData\imageinstance.h" />
+    <QtMoc Include="src\view\dicom2d\GraphicsItem\graphicstextmarkdialog.h" />
+    <QtMoc Include="src\view\currency\videocontrolview.h" />
+    <QtMoc Include="src\view\currency\gridpopwidget.h" />
+    <QtMoc Include="src\script\storescpthread.h" />
+    <QtMoc Include="src\script\scandcmfilethread.h" />
+    <QtMoc Include="src\script\importdcmfilethread.h" />
+    <QtMoc Include="src\script\imageloadthread.h" />
+    <QtMoc Include="src\script\exportimagethread.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="src\dao\KissDb" />
+    <None Include="src\resources\Style\style.qss" />
+    <None Include="src\script\KissScript" />
+    <None Include="src\view\KissView" />
+    <None Include="src\widget\KissWidget" />
+    <None Include="src\window\KissWindow" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="src\resources\xml\modalityprop.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="src\resources\Multi.ico" />
+    <Image Include="src\resources\png\adjust.png" />
+    <Image Include="src\resources\png\angle.png" />
+    <Image Include="src\resources\png\anno.png" />
+    <Image Include="src\resources\png\arrow_sync.png" />
+    <Image Include="src\resources\png\contrast.png" />
+    <Image Include="src\resources\png\download.png" />
+    <Image Include="src\resources\png\ellipse.png" />
+    <Image Include="src\resources\png\export.png" />
+    <Image Include="src\resources\png\full_screen.png" />
+    <Image Include="src\resources\png\full_screen_exit.png" />
+    <Image Include="src\resources\png\grid.png" />
+    <Image Include="src\resources\png\help.png" />
+    <Image Include="src\resources\png\hflip.png" />
+    <Image Include="src\resources\png\line.png" />
+    <Image Include="src\resources\png\lrotate.png" />
+    <Image Include="src\resources\png\magnifier.png" />
+    <Image Include="src\resources\png\move.png" />
+    <Image Include="src\resources\png\open.png" />
+    <Image Include="src\resources\png\pencil.png" />
+    <Image Include="src\resources\png\polygon.png" />
+    <Image Include="src\resources\png\rect.png" />
+    <Image Include="src\resources\png\recycle.png" />
+    <Image Include="src\resources\png\reset.png" />
+    <Image Include="src\resources\png\rrotate.png" />
+    <Image Include="src\resources\png\series.png" />
+    <Image Include="src\resources\png\settings.png" />
+    <Image Include="src\resources\png\slicing.png" />
+    <Image Include="src\resources\png\text.png" />
+    <Image Include="src\resources\png\vflip.png" />
+    <Image Include="src\resources\png\video.png" />
+    <Image Include="src\resources\png\video\backforward01.png" />
+    <Image Include="src\resources\png\video\backforward02.png" />
+    <Image Include="src\resources\png\video\fastforward01.png" />
+    <Image Include="src\resources\png\video\fastforward02.png" />
+    <Image Include="src\resources\png\video\nextframe01.png" />
+    <Image Include="src\resources\png\video\nextframe02.png" />
+    <Image Include="src\resources\png\video\pause01.png" />
+    <Image Include="src\resources\png\video\play01.png" />
+    <Image Include="src\resources\png\video\play02.png" />
+    <Image Include="src\resources\png\video\prevframe01.png" />
+    <Image Include="src\resources\png\video\prevframe02.png" />
+    <Image Include="src\resources\png\zoomin.png" />
+    <Image Include="src\resources\png\zoomout.png" />
+    <Image Include="src\resources\Style\StyleResources\add_bottom.png" />
+    <Image Include="src\resources\Style\StyleResources\add_left.png" />
+    <Image Include="src\resources\Style\StyleResources\add_right.png" />
+    <Image Include="src\resources\Style\StyleResources\add_top.png" />
+    <Image Include="src\resources\Style\StyleResources\branch_close.png" />
+    <Image Include="src\resources\Style\StyleResources\branch_open.png" />
+    <Image Include="src\resources\Style\StyleResources\calendar_nextmonth.png" />
+    <Image Include="src\resources\Style\StyleResources\calendar_prevmonth.png" />
+    <Image Include="src\resources\Style\StyleResources\checkbox_checked.png" />
+    <Image Include="src\resources\Style\StyleResources\checkbox_checked_disable.png" />
+    <Image Include="src\resources\Style\StyleResources\checkbox_parcial.png" />
+    <Image Include="src\resources\Style\StyleResources\checkbox_parcial_disable.png" />
+    <Image Include="src\resources\Style\StyleResources\checkbox_unchecked.png" />
+    <Image Include="src\resources\Style\StyleResources\checkbox_unchecked_disable.png" />
+    <Image Include="src\resources\Style\StyleResources\radiobutton_checked.png" />
+    <Image Include="src\resources\Style\StyleResources\radiobutton_checked_disable.png" />
+    <Image Include="src\resources\Style\StyleResources\radiobutton_unchecked.png" />
+    <Image Include="src\resources\Style\StyleResources\radiobutton_unchecked_disable.png" />
+    <Image Include="src\resources\Style\StyleResources\scrollbardown01.png" />
+    <Image Include="src\resources\Style\StyleResources\scrollbardown02.png" />
+    <Image Include="src\resources\Style\StyleResources\scrollbarleft01.png" />
+    <Image Include="src\resources\Style\StyleResources\scrollbarleft02.png" />
+    <Image Include="src\resources\Style\StyleResources\scrollbarright01.png" />
+    <Image Include="src\resources\Style\StyleResources\scrollbarright02.png" />
+    <Image Include="src\resources\Style\StyleResources\scrollbarup01.png" />
+    <Image Include="src\resources\Style\StyleResources\scrollbarup02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DicomViewer.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
