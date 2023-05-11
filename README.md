@@ -7,12 +7,12 @@ DicomViewer 软件除了能够查看图像外，还包括一些其他的功能�
 
 DicomViewer 的安装方式如下：
 
-1、打开 DicomViewer 的 GitHub 仓库页面（https://github.com/DataKnightt/Dicomviewer）。
+1、打开 DicomViewer 的 GitHub 仓库页面。（https://github.com/DataKnightt/Dicomviewer）
 
 2、在页面右侧的 "Releases" 部分选择最新的版本并下载相应的压缩包。
 
 3、解压缩下载的压缩包到本地文件夹中。
 
-4、运行解压缩后的可执行文件（Windows 系统中为 DicomViewer.exe，Linux 和 macOS 系统中为 DicomViewer）。
+4、运行解压缩后的可执行文件。
 
-5、安装完成后，你可以通过打开解压后的文件夹并运行可执行文件来启动 DicomViewer。
+5、安装完成后，你可以通过打开解压后的文件夹并运行可执行文件来启动泛影阅片。
